@@ -1,0 +1,8 @@
+# Ignorar outputs del pipeline (trazabilidad local)
+outputs/
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

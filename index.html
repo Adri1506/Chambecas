@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Las Chambecas — Artículos de fiesta infantil, sublimación personalizada, cotillón y más. Tu tienda de confianza para celebraciones inolvidables.">
+  <meta property="og:title" content="Las Chambecas — Fiestas Infantiles y Sublimación">
+  <meta property="og:description" content="Artículos de fiesta infantil, sublimación personalizada y cotillón. ¡Celebra con estilo!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://laschambecas.cl">
+  <meta property="og:image" content="branding/logo.png">
+
+  <title>Las Chambecas — Fiestas Infantiles y Sublimación</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="branding/logo.png">
+  <link rel="apple-touch-icon" href="branding/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       SKIP LINK
+       ============================================================ -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Las Chambecas — Inicio">
+        <img class="logo__img" src="branding/logo.png" alt="Las Chambecas" width="40" height="40">
+      </a>
+
+      <!-- Navegación (mobile panel + desktop horizontal) -->
+      <nav class="nav nav--mobile" aria-label="Menú de navegación principal">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link nav__link--active">Inicio</a></li>
+          <li><a href="galeria.html" class="nav__link">Galería</a></li>
+          <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+          <li><a href="pedido.html" class="nav__link">Pedido</a></li>
+          <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+          <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+        </ul>
+
+        <!-- Redes sociales en el menú (visible en mobile panel y desktop) -->
+        <div class="header__social">
+          <a href="https://www.instagram.com/las_chambecas/"
+             class="header__social-link"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Síguenos en Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Botón menú hamburguesa (visible solo en mobile) -->
+      <button class="menu-toggle hide-desktop" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+
+      <!-- Overlay del menú móvil -->
+      <div class="nav-overlay" aria-hidden="true"></div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+
+    <!-- ==========================================================
+         HERO
+         ========================================================== -->
+    <section class="hero">
+      <img class="hero__background"
+           src="branding/banner.png"
+           alt=""
+           aria-hidden="true"
+           loading="eager">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">Las Chambecas</h1>
+        <p class="hero__subtitle">Artículos de fiesta infantil, sublimación y más...</p>
+        <div class="hero__actions">
+          <a href="servicios.html" class="btn btn--primary btn--lg">Ver Servicios</a>
+          <a href="contacto.html" class="btn btn--outline btn--lg">Contáctanos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SERVICIOS
+         ========================================================== -->
+    <section class="section section--alt" id="servicios" aria-labelledby="servicios-heading">
+      <div class="container">
+        <h2 id="servicios-heading" class="text-center mb-xl">Nuestros Servicios</h2>
+
+        <div class="grid grid--2">
+
+          <!-- Tazas Personalizadas -->
+          <article class="card card--service">
+            <div class="card__body">
+               <img src="imagenes/taza1.png"
+                    alt="Tazas personalizadas con diseños únicos"
+                    loading="lazy"
+                    class="mb-md block rounded-lg w-full">
+              <h3 class="card__title">Tazas Personalizadas</h3>
+              <p class="card__text">Tazas diseñadas al gusto, perfectas para regalos, eventos y detalles personalizados con tu propio estilo.</p>
+              <a href="servicios.html" class="btn btn--outline btn--sm mt-md">Ver más</a>
+            </div>
+          </article>
+
+          <!-- Poleras Sublimadas -->
+          <article class="card card--service">
+            <div class="card__body">
+               <img src="imagenes/poleras1.png"
+                    alt="Poleras sublimadas con estampados de alta calidad"
+                    loading="lazy"
+                    class="mb-md block rounded-lg w-full">
+              <h3 class="card__title">Poleras Sublimadas</h3>
+              <p class="card__text">Poleras con estampados de alta calidad, ideales para uniformes, eventos familiares y promociones.</p>
+              <a href="servicios.html" class="btn btn--outline btn--sm mt-md">Ver más</a>
+            </div>
+          </article>
+
+          <!-- Cotillón -->
+          <article class="card card--service">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" aria-hidden="true">
+                <path d="M9 3L7.5 7.5 3 9l4.5 1.5L9 15l1.5-4.5L15 9l-4.5-1.5L9 3zm8 7l-1 2.5-2.5 1 2.5 1 1 2.5 1-2.5L21 13l-2.5-1L17 10zm-5 5l-1 2-2 1 2 1 1 2 1-2 2-1-2-1-1-2z"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Cotillón</h3>
+            <p class="card__text">Todo lo que necesitas para decorar tus fiestas: globos, confeti, serpentinas y más artículos de cotillón.</p>
+          </article>
+
+          <!-- Agendas -->
+          <article class="card card--service">
+            <div class="card__body">
+               <img src="imagenes/agenda1.png"
+                    alt="Agendas personalizadas con diseños exclusivos"
+                    loading="lazy"
+                    class="mb-md block rounded-lg w-full">
+              <h3 class="card__title">Agendas</h3>
+              <p class="card__text">Agendas personalizadas para organizar tu año con diseños únicos y cubiertas a tu medida.</p>
+              <a href="servicios.html" class="btn btn--outline btn--sm mt-md">Ver más</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="text-center mt-2xl">
+          <a href="servicios.html" class="btn btn--primary">Ver todos los servicios &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         GALERÍA DE PIÑATAS
+         ========================================================== -->
+    <section class="section section--gallery" id="galeria" aria-labelledby="galeria-heading">
+      <div class="container">
+        <h2 id="galeria-heading" class="text-center mb-xl">Galería de Piñatas</h2>
+
+        <div class="grid grid--3">
+
+          <a href="galeria.html" class="gallery__item" aria-label="Ver piñata infantil decorativa en la galería">
+            <img src="imagenes/foto1.png" alt="Piñata infantil decorativa de personaje animado" loading="lazy">
+            <div class="gallery__item-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="galeria.html" class="gallery__item" aria-label="Ver piñata temática infantil en la galería">
+            <img src="imagenes/foto2.png" alt="Piñata temática infantil de superhéroe" loading="lazy">
+            <div class="gallery__item-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="galeria.html" class="gallery__item" aria-label="Ver piñata de unicornio en la galería">
+            <img src="imagenes/foto3.png" alt="Piñata de unicornio con colores pastel" loading="lazy">
+            <div class="gallery__item-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="galeria.html" class="gallery__item" aria-label="Ver piñata de número gigante en la galería">
+            <img src="imagenes/foto4.png" alt="Piñata de número gigante para cumpleaños" loading="lazy">
+            <div class="gallery__item-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="galeria.html" class="gallery__item" aria-label="Ver piñata de personaje infantil en la galería">
+            <img src="imagenes/foto5.png" alt="Piñata de personaje infantil para fiestas" loading="lazy">
+            <div class="gallery__item-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="galeria.html" class="gallery__item" aria-label="Ver piñata de estrella en la galería">
+            <img src="imagenes/foto6.png" alt="Piñata de estrella decorativa" loading="lazy">
+            <div class="gallery__item-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="text-center mt-xl">
+          <a href="galeria.html" class="btn btn--primary">Ver galería completa &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CTA — LLAMADO A LA ACCIÓN
+         ========================================================== -->
+    <section class="section bg-alt" aria-labelledby="cta-heading">
+      <div class="container text-center">
+        <h2 id="cta-heading" class="mb-md">¿Listo para tu próxima fiesta?</h2>
+        <p class="mb-xl">
+          Contáctanos y te ayudamos a crear algo increíble
+        </p>
+        <a href="https://wa.me/56971930350"
+           class="btn btn--primary btn--lg"
+           target="_blank"
+           rel="noopener noreferrer">
+          Pide por WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <!-- Columna 1: Marca -->
+        <div>
+          <a href="index.html" class="logo" aria-label="Las Chambecas — Inicio">
+            <img class="logo__img" src="branding/logo.png" alt="Las Chambecas" width="40" height="40" loading="lazy">
+          </a>
+          <p class="footer__text">
+            Tu tienda de confianza para artículos de fiesta infantil, sublimación personalizada y cotillón. Hacemos de cada celebración un momento único.
+          </p>
+        </div>
+
+        <!-- Columna 2: Enlaces -->
+        <div>
+          <h3 class="footer__title">Enlaces</h3>
+          <ul>
+            <li><a href="index.html" class="footer__link">Inicio</a></li>
+            <li><a href="galeria.html" class="footer__link">Galería</a></li>
+            <li><a href="servicios.html" class="footer__link">Servicios</a></li>
+            <li><a href="pedido.html" class="footer__link">Pedido</a></li>
+            <li><a href="nosotros.html" class="footer__link">Nosotros</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Contacto -->
+        <div>
+          <h3 class="footer__title">Contacto</h3>
+          <ul>
+            <li>
+              <a href="https://wa.me/56971930350"
+                 class="footer__link"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                +56 9 7193 0350
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/las_chambecas/"
+                 class="footer__link"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+                @las_chambecas
+              </a>
+            </li>
+            <li>
+              <a href="mailto:adriaticosama@gmail.com"
+                 class="footer__link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                adriaticosama@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Las Chambecas. Todos los derechos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       WHATSAPP FLOAT (contenedor para el JS)
+       ============================================================ -->
+  <div id="whatsapp-float" class="whatsapp-float"></div>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
