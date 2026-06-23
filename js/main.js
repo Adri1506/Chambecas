@@ -513,6 +513,10 @@ function renderProductDetail(productId) {
     return;
   }
 
+  // Leer índice de imagen desde query param (si viene de la galería)
+  var imgIndex = parseInt(getQueryParam('img')) || 0;
+  if (imgIndex < 0) imgIndex = 0;
+
   // Mostrar detalle, ocultar listado
   document.getElementById('producto-detalle').style.display = 'block';
   document.getElementById('producto-listado').style.display = 'none';
@@ -529,26 +533,45 @@ function renderProductDetail(productId) {
   var imgPrincipal = document.getElementById('producto-imagen-principal');
   var thumbs = document.getElementById('producto-thumbs');
 
+  // Saber si venimos de una imagen específica de la galería
+  var imagenEspecifica = getQueryParam('img') !== null;
+
   if (producto.imagenes && producto.imagenes.length > 0) {
+    // Limitar imgIndex al rango disponible
+    if (imgIndex >= producto.imagenes.length) imgIndex = 0;
+
     // Mostrar galería de imágenes
     galeria.style.display = 'block';
-    imgPrincipal.src = producto.imagenes[0];
-    imgPrincipal.alt = producto.nombre;
 
-    thumbs.innerHTML = '';
-    producto.imagenes.forEach(function(imgSrc, index) {
-      var thumb = document.createElement('div');
-      thumb.className = 'product-gallery__thumb' + (index === 0 ? ' product-gallery__thumb--active' : '');
-      thumb.innerHTML = '<img src="' + imgSrc + '" alt="' + producto.nombre + ' - imagen ' + (index + 1) + '" loading="lazy">';
-      thumb.addEventListener('click', function() {
-        imgPrincipal.src = imgSrc;
-        document.querySelectorAll('.product-gallery__thumb').forEach(function(t) {
-          t.classList.remove('product-gallery__thumb--active');
+    if (imagenEspecifica) {
+      // === MODO: Viene desde la galería → muestra SOLO esa imagen ===
+      imgPrincipal.style.display = 'block';
+      imgPrincipal.src = producto.imagenes[imgIndex];
+      imgPrincipal.alt = producto.nombre;
+      thumbs.innerHTML = '';
+      thumbs.style.display = 'none';
+    } else {
+      // === MODO: Vista general → muestra todas las miniaturas ===
+      imgPrincipal.style.display = 'block';
+      imgPrincipal.src = producto.imagenes[imgIndex];
+      imgPrincipal.alt = producto.nombre;
+      thumbs.style.display = 'flex';
+
+      thumbs.innerHTML = '';
+      producto.imagenes.forEach(function(imgSrc, index) {
+        var thumb = document.createElement('div');
+        thumb.className = 'product-gallery__thumb' + (index === imgIndex ? ' product-gallery__thumb--active' : '');
+        thumb.innerHTML = '<img src="' + imgSrc + '" alt="' + producto.nombre + ' - imagen ' + (index + 1) + '" loading="lazy">';
+        thumb.addEventListener('click', function() {
+          imgPrincipal.src = imgSrc;
+          document.querySelectorAll('.product-gallery__thumb').forEach(function(t) {
+            t.classList.remove('product-gallery__thumb--active');
+          });
+          thumb.classList.add('product-gallery__thumb--active');
         });
-        thumb.classList.add('product-gallery__thumb--active');
+        thumbs.appendChild(thumb);
       });
-      thumbs.appendChild(thumb);
-    });
+    }
   } else {
     // Mostrar icono SVG
     galeria.style.display = 'block';

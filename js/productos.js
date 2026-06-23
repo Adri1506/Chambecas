@@ -29,12 +29,19 @@ const PRODUCTOS = [
     id: 'pinatas',
     nombre: 'Piñatas',
     descripcion: 'Piñatas artesanales decorativas para toda ocasión. Cumpleaños, eventos y celebraciones temáticas.',
-    imagenes: ['imagenes/foto1.png', 'imagenes/foto2.png', 'imagenes/foto3.png'],
+    imagenes: [
+      'imagenes/foto1.png', 'imagenes/foto2.png', 'imagenes/foto3.png',
+      'imagenes/foto4.png', 'imagenes/foto5.png', 'imagenes/foto6.png',
+      'imagenes/foto7.png', 'imagenes/foto8.png', 'imagenes/foto9.png',
+      'imagenes/foto10.png', 'imagenes/foto11.png', 'imagenes/foto12.png',
+      'imagenes/foto13.png', 'imagenes/foto14.png', 'imagenes/foto15.png'
+    ],
     icono: null,
     precios: [
       { item: 'Piñatas (desde)', precio: 20000 }
     ],
-    incluyeWhatsApp: false
+    incluyeWhatsApp: true,
+    whatsappMensaje: 'Hola%2C%20quiero%20cotizar%20una%20pi%C3%B1ata'
   },
   {
     id: 'agendas',
