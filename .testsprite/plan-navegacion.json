@@ -1,0 +1,18 @@
+{
+  "projectId": "eb02b8ed-3682-4410-afa9-0b6dc955b650",
+  "type": "frontend",
+  "name": "Navegación entre páginas funciona correctamente",
+  "description": "Verificar que los enlaces de navegación llevan a las páginas correctas",
+  "priority": "p0",
+  "planSteps": [
+    { "type": "action", "description": "Navegar a la página de inicio" },
+    { "type": "action", "description": "Hacer clic en 'Galería' en el menú de navegación" },
+    { "type": "assertion", "description": "Verificar que redirige a la galería y el título es 'Galería de Piñatas'" },
+    { "type": "action", "description": "Hacer clic en 'Servicios' en el menú" },
+    { "type": "assertion", "description": "Verificar que redirige a servicios y el título es 'Servicios'" },
+    { "type": "action", "description": "Hacer clic en 'Contacto' en el menú" },
+    { "type": "assertion", "description": "Verificar que redirige a contacto y el título es 'Contacto'" },
+    { "type": "action", "description": "Navegar de vuelta al inicio" },
+    { "type": "assertion", "description": "Verificar que la homepage se carga correctamente" }
+  ]
+}

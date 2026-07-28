@@ -1,0 +1,14 @@
+{
+  "projectId": "eb02b8ed-3682-4410-afa9-0b6dc955b650",
+  "type": "frontend",
+  "name": "Galería muestra todas las piñatas con sus precios",
+  "description": "Verificar que la galería carga todas las piñatas y los enlaces a precios funcionan",
+  "priority": "p1",
+  "planSteps": [
+    { "type": "action", "description": "Navegar a /galeria" },
+    { "type": "assertion", "description": "Verificar que el título es 'Galería de Piñatas — Las Chambecas'" },
+    { "type": "assertion", "description": "Verificar que hay al menos 10 imágenes de piñatas visibles" },
+    { "type": "action", "description": "Hacer clic en 'Ver precios de piñatas'" },
+    { "type": "assertion", "description": "Verificar que redirige a producto.html con query params" }
+  ]
+}

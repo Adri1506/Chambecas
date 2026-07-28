@@ -1,7 +1,21 @@
 # Ignorar outputs del pipeline (trazabilidad local)
-outputs/
+outputs/development/
+outputs/security/
+outputs/qa/
+outputs/planner/
+outputs/architect/
+outputs/designer/
+outputs/orchestrator/
+outputs/qa/
 
-# Ignorar archivos del sistema
+# Incluir docs y reports de producción
+!outputs/documents/
+!outputs/production/
+
+# Playwright artifacts (screenshots binarios)
+.playwright-cli/
+
+# Archivos del sistema
 .DS_Store
 Thumbs.db
 *.swp

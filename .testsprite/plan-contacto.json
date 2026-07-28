@@ -1,0 +1,13 @@
+{
+  "projectId": "eb02b8ed-3682-4410-afa9-0b6dc955b650",
+  "type": "frontend",
+  "name": "Página de contacto muestra información de la empresa",
+  "description": "Verificar que la página de contacto tiene la información correcta",
+  "priority": "p1",
+  "planSteps": [
+    { "type": "action", "description": "Navegar a /contacto" },
+    { "type": "assertion", "description": "Verificar que el título es 'Contacto — Las Chambecas'" },
+    { "type": "assertion", "description": "Verificar que hay enlaces a WhatsApp e Instagram" },
+    { "type": "assertion", "description": "Verificar que el correo electrónico está visible" }
+  ]
+}
